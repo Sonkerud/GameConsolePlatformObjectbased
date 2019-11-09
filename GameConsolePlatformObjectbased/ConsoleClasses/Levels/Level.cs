@@ -50,7 +50,9 @@ namespace GameConsolePlatformObjectbased.ConsoleClasses.Levels
             {
                 for (int x = 0; x < LevelAsCharArray.GetLength(0); x++)
                 {
+                    //LevelAsCharArray[x, y] = levelAsString[y * LevelAsCharArray.GetLength(0) + x];
                     LevelAsCharArray[x, y] = levelAsString[y * LevelAsCharArray.GetLength(0) + x];
+
                 }
             }
         }
