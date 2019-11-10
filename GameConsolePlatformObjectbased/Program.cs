@@ -9,11 +9,18 @@ namespace GameConsolePlatformObjectbased
     {
         static void Main(string[] args)
         {
+            string hej = " ______________________________________________________________________________________________________________ ";
+           var h = hej[1];
+            var j = hej.Length;
             Level level = new Level();
             
             level.GenerateLevelAsCharArray(Level.BaseLevelAsString());
-            Map.MapCreator.LoadMapWithObjects(level);
-            ConsoleClasses.DrawLevel.PrintMap(Map.MapCreator.LoadMapWithObjects(level));
+            //Map.MapCreator.LoadMapWithObjects(level);
+            //ConsoleClasses.DrawLevel.PrintMap(Map.MapCreator.LoadMapWithObjects(level));
+
+            Console.WriteLine(j);
+
+            Console.ReadLine();
         }
 
         public static void Test()
@@ -25,6 +32,8 @@ namespace GameConsolePlatformObjectbased
             GroundObject groundObject = new GroundObject();
 
             listOfObjects.Add(mapObject);
+            listOfObjects.Add(wallObject);
+
 
         }
     }
