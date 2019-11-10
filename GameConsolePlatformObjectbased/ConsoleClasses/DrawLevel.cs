@@ -9,11 +9,11 @@ namespace GameConsolePlatformObjectbased.ConsoleClasses
     {
             public static void PrintMap(IMapObject[,] mapWithObjects)
             {
-                for (int y = 0; y < mapWithObjects.GetLength(1); y++)
+                for (int y = 0; y < mapWithObjects.GetLength(0); y++)
                 {
-                    for (int x = 0; x < mapWithObjects.GetLength(0); x++)
+                    for (int x = 0; x < mapWithObjects.GetLength(1); x++)
                     {
-                        Console.Write(mapWithObjects[x, y].Symbol);
+                        Console.Write(mapWithObjects[y, x].Symbol);
                     }
                     Console.WriteLine();
                 }

@@ -31,12 +31,26 @@ namespace GameConsolePlatformObjectbased.ConsoleClasses.Levels
                     "|                                                                                                              |" +
                     "|                                                                                                              |" +
                     "|                                                                                                              |" +
+                    "|   @                                                                                                          |" +
                     "|                                                                                                              |" +
-                    "|                                                                                                              |" +
-                    "|                                                                                                              |" +
+                    "|TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT|" +
                     "|                                                                                                              |" +
                     "|                                                                                                              |" +
                     "|______________________________________________________________________________________________________________|";
+        }
+        public static string SmallMapAsString()
+        {
+            //return "____" +
+            //       "|  |" +
+            //       "|  |" +
+            //       "|  |" +
+            //       "TTTT";
+            return " |  " +
+                   "  T " +
+                   "    " +
+                   "    " +
+                   "    ";
+
         }
 
         public Level()
@@ -44,13 +58,17 @@ namespace GameConsolePlatformObjectbased.ConsoleClasses.Levels
             LevelAsCharArray = new char[28,112];
         }
 
+
+
         public void GenerateLevelAsCharArray(string levelAsString)
         {
-            for (int y = 0; y < LevelAsCharArray.GetLength(1); y++)
+            //bytte plats på 0 och (1).
+            for (int y = 0; y < LevelAsCharArray.GetLength(0); y++)
             {
-                for (int x = 0; x < LevelAsCharArray.GetLength(0); x++)
+                for (int x = 0; x < LevelAsCharArray.GetLength(1); x++)
                 {
-                    LevelAsCharArray[x, y] = levelAsString[y * LevelAsCharArray.GetLength(0) + x];
+                    //bytte plats på x och y i LevelAsCharArray.
+                    LevelAsCharArray[y, x] = levelAsString[y * LevelAsCharArray.GetLength(1) + x];
                 }
             }
         }

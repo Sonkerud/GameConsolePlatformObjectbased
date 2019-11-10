@@ -18,7 +18,7 @@ namespace GameConsolePlatformObjectbased
 
         public static void Test()
         {
-            List<IMapObjects> listOfObjects = new List<IMapObjects>();
+            List<IMapObject> listOfObjects = new List<IMapObject>();
 
             MapObject mapObject = new MapObject();
             WallObject wallObject = new WallObject();

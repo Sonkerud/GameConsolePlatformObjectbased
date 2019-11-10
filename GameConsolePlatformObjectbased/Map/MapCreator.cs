@@ -8,12 +8,12 @@ namespace GameConsolePlatformObjectbased.Map
 {
     public class MapCreator
     {
-        public IMapObject[,] level1 = new IMapObject[28,112];
+        //public IMapObject[,] level1 = new IMapObject[28,112];
 
 
         public static IMapObject[,] LoadMapWithObjects(Level level)
         {
-            IMapObject[,] objectRenderedMap = new MapObject[28, 112];
+            IMapObject[,] objectRenderedMap = new IMapObject[28, 112];
 
             for (int y = 0; y < level.LevelAsCharArray.GetLength(1); y++)
             {
